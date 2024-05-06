@@ -10,6 +10,7 @@ import React from "react";
 import app from "./../../assets/images/app.png";
 import Colors from "../../assets/Shared/Colors";
 import { Button } from "react-native";
+import SignInWithOAuth from "../Components/SignInWithOAuth";
 export default function Login() {
   return (
     <View style={{ alignItems: "center", backgroundColor: Colors.LIGHT_GRAY }}>
@@ -29,19 +30,7 @@ export default function Login() {
         <Text style={{ textAlign: "center", marginTop: 20 }}>
           Book Appointments Effortlessly and manager your health journey
         </Text>
-        <TouchableOpacity
-          onPress={() => console.log("Clicked")}
-          style={{
-            padding: 16,
-            backgroundColor: Colors.PRIMARY,
-            borderRadius: 90,
-            alignItems: "center",
-            marginTop: 20,
-            width: Dimensions.get("screen").width * 0.8,
-          }}
-        >
-          <Text style={{ fontSize: 17, color: Colors.white }}>Login</Text>
-        </TouchableOpacity>
+        <SignInWithOAuth />
       </View>
     </View>
   );
